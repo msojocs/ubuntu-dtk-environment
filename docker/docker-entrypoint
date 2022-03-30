@@ -3,6 +3,9 @@
 strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBC
 strings /lib/x86_64-linux-gnu/libc.so.6 | grep GLIBC_2.2
 
+tail -f /etc/issue
+exit 1
+
 notice() {
     echo -e "\033[36m $1 \033[0m "
 }
