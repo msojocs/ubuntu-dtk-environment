@@ -16,11 +16,14 @@ services:
     entrypoint: /workspace/docker/docker-entrypoint
     userns_mode: "host"
   u16:
+    # image: ubuntu:16.04
     build:
       context: ./docker
-      dockerfile: Dockerfile16.04
+      dockerfile: Dockerfile16
     volumes:
       - .:/workspace
+      - /mnt/disk2/qt-test/qt-everywhere-opensource-src-5.15.3/qt-everywhere-src-5.15.3:/workplace/qt-src
+      - /mnt/disk2/qt:/opt/Qt
     environment:
       - ACTION_MODE=${ACTION_MODE:-false}
       - LOCAL_USER_ID=${DOCKER_UID:-1000}
