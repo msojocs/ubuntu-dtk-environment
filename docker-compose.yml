@@ -4,7 +4,7 @@ services:
     # image: msojocs/ubuntu18-dtk-env:latest
     build:
       context: ./docker
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile16
     volumes:
       - .:/workspace
       # - ./cache/.npm:/root/.npm
